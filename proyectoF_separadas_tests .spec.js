@@ -233,7 +233,7 @@ test('Test case 7: En Browser Windows seleccionar New Tab para que redireccione 
 //CASO8
 //Navegar en "Widgets" ir al "Progress Bar" y dar click en "Start"
 
-test('Navegar en Widgets ir al Progress Bar y dar click en Start', async ({ page }) => {
+test('Test case 8: Navegar en Widgets ir al Progress Bar y dar click en Start', async ({ page }) => {
     console.log("Test case 8: Navegar en Widgets ir al Progress Bar y dar click en Start");
 
     try {
@@ -283,7 +283,7 @@ test('Navegar en Widgets ir al Progress Bar y dar click en Start', async ({ page
 });
 // //CASO9 negativo
 // //En "Widgets" Verificar el color verde presente en el "Progress Bar" una vez completado el proceso
-test('En "Widgets" Verificar el color verde presente en el "Progress Bar" una vez completado el proceso ', async ({ page }) => {
+test('Test case 9: En "Widgets" Verificar el color verde presente en el "Progress Bar" una vez completado el proceso ', async ({ page }) => {
 
   try {
        console.log("Test case 9: En Widgets Verificar el color verde presente en el Progress Bar una vez completado el proceso");
@@ -322,7 +322,7 @@ test('En "Widgets" Verificar el color verde presente en el "Progress Bar" una ve
 });
 //CASO10
 //Navegar en "Book Store Application" ir al "Login"
-test('Navegar en "Book Store Application" ir al "Login" ', async ({ page }) => {
+test('Test case 10: Navegar en "Book Store Application" ir al "Login" ', async ({ page }) => {
   try {
         console.log("Test case 10: Navegar en Book Store Application ir al Login");
     // Paso 1: Ingresar a la página principal y verificar que la categoría "Book Store Application" esté presente
@@ -354,7 +354,7 @@ test('Navegar en "Book Store Application" ir al "Login" ', async ({ page }) => {
 });
 //CASO11
 //Click en "New User" verificar que se despliegue la nueva pantalla en https://demoqa.com/register
-test('Click en New User verificar que se despliegue la nueva pantalla en https://demoqa.com/register', async ({ page }) => {
+test('Test case 11: Click en New User verificar que se despliegue la nueva pantalla en https://demoqa.com/register', async ({ page }) => {
 
   try {
      console.log("Test case 11: Click en New User verificar que se despliegue la nueva pantalla en https://demoqa.com/register");
