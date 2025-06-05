@@ -1,0 +1,22 @@
+{
+  "name": "poryecto-final",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "test": "playwright test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.26",
+    "allure-playwright": "^3.2.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0",
+    "playwright-core": "^1.52.0"
+  },
+  "keywords": [],
+  "description": ""
+}
