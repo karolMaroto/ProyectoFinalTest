@@ -4,10 +4,8 @@ const { chromium } = require('playwright');
 //CASO1
 //Verificar que el la pagina demoqa.com exista y que en la pantalla de inicio aparezca el Logo de "Tools QA"
 
-
-test('Interacciones básicas en Demo QA, Test case 1- 4', async ({ page }) => {
+test('Test case 1: Verificar que el la pagina demoqa.com exista y que en la pantalla de inicio aparezca el Logo de Tools QA', async ({ page }) => {
     console.log("Test case 1: Verificar que el la pagina demoqa.com exista y que en la pantalla de inicio aparezca el Logo de Tools QA");
-
     try {
         await page.goto('https://demoqa.com');
         await page.waitForTimeout(1000)
@@ -17,8 +15,10 @@ test('Interacciones básicas en Demo QA, Test case 1- 4', async ({ page }) => {
     } catch (error) {
         console.error("❌ Test case 1: Falló la validación del logo de Tools QA. Error:", error.message);
     }
+});
 // //CASO2
 // //Verificar que exitan diferente boton enlaces ( Elements , Form, Alerts, Frame & Windows, Widgats, Interactions and Book Store Application
+test('Test case 2: Verificar que exitan diferente boton enlaces ( Elements , Form, Alerts, Frame & Windows, Widgats, Interactions and Book Store Application', async ({ page }) => {
     console.log("Test case 2: Verificar que exitan diferente boton enlaces ( Elements , Form, Alerts, Frame & Windows, Widgats, Interactions and Book Store Application");
     try {
         // Paso 1: Acceder a la página principal
@@ -48,9 +48,12 @@ test('Interacciones básicas en Demo QA, Test case 1- 4', async ({ page }) => {
         // Mensaje de error en la consola
         console.error("❌ Test case 2: Falló la validación de las cartas de navegación. Error:", error.message);   
     }
+});
 
 // // //CASO 3
 // // // Ir al enlace de Elements
+test('Test case 3: Ir al enlace de Elements', async ({ page }) => {
+
    console.log("Test case 3: Ir al enlace de Elements");
    try {
     // Paso 1: Ingresar a demoqa.com
@@ -73,9 +76,10 @@ test('Interacciones básicas en Demo QA, Test case 1- 4', async ({ page }) => {
   } catch (error) {
     console.error("❌ Test case 3: Falló la interacción con el botón 'Elements'. Error:", error.message);
   } 
-
+});
 // // //CASO4
 // // // Dentro de Elements verificar que en la lista de desplegables aparezcan "Text box" dar clic y verificar que sea el pagina de Text Box
+test('Test case 4: Dentro de Elements verificar que en la lista de desplegables aparezcan Text box dar clic y verificar que sea el pagina de Text Box', async ({ page }) => {
 console.log("Test case 4: Dentro de Elements verificar que en la lista de desplegables aparezcan Text box dar clic y verificar que sea el pagina de Text Box");
 try {
     // Paso 1: Ingresar a la página de Elements con un tiempo de espera extendido
@@ -114,7 +118,7 @@ try {
 });
 
  //Test group for test cases 5-7
-test('Interacciones básicas en Demo QA, Test case 5-7', async ({ page }) => {
+test('Test case 5: Navegar en Elements , ir a Radio Button y seleccionar Impressive', async ({ page }) => {
     //CASO5
     //Navegar en "Elements" , ir a "Radio Button" y seleccionar "Impressive"
     console.log("Test case 5: Navegar en Elements , ir a Radio Button y seleccionar Impressive");
@@ -150,9 +154,10 @@ test('Interacciones básicas en Demo QA, Test case 5-7', async ({ page }) => {
     // Mensaje de error en la consola
     console.error("❌ Test case 5: Falló la validación de la opción 'Impressive'. Error:", error.message);
   }
-
+});
 //CASO6
 //Navegar en "Alerts, Frame & Windows" , ir a "Browser Windows"
+test('Test case 6: Navegar en Alerts, Frame & Windows , ir a Browser Windows', async ({ page }) => {
    console.log("Test case 6: Navegar en Alerts, Frame & Windows , ir a Browser Windows");
   try {
     // Paso 1: Ingresar a la página principal
@@ -185,11 +190,11 @@ test('Interacciones básicas en Demo QA, Test case 5-7', async ({ page }) => {
     console.error("❌ Test case 6: Falló el acceso a la categoría 'Alerts, Frame & Windows' o al submenú 'Browser Windows'. Error:", error.message);
   }
 
-
+});
 
 // //CASO7 
 // //En Browser Windows seleccionar "New Tab" para que redireccione a https://demoqa.com/sample
-
+test('Test case 7: En Browser Windows seleccionar New Tab para que redireccione a https://demoqa.com/sample', async ({ page }) => {
    console.log("Test case 7: En Browser Windows seleccionar New Tab para que redireccione a https://demoqa.com/sample");
    try {
         // Paso 1: Ingresar a la página de Browser Windows
@@ -227,7 +232,6 @@ test('Interacciones básicas en Demo QA, Test case 5-7', async ({ page }) => {
 });
 //CASO8
 //Navegar en "Widgets" ir al "Progress Bar" y dar click en "Start"
-
 
 test('Navegar en Widgets ir al Progress Bar y dar click en Start', async ({ page }) => {
     console.log("Test case 8: Navegar en Widgets ir al Progress Bar y dar click en Start");
@@ -336,7 +340,7 @@ test('Navegar en "Book Store Application" ir al "Login" ', async ({ page }) => {
     const loginButton = page.locator('button[id="login"]');
     await expect(loginButton).toBeVisible();
     await loginButton.click();
-
+    await page.waitForTimeout(9000);
     // Validar que la URL cambie a la página de "Login"
     await expect(page).toHaveURL('https://demoqa.com/login');
 
@@ -386,7 +390,7 @@ test('Click en New User verificar que se despliegue la nueva pantalla en https:/
 // //En https://demoqa.com/register completar la informacion "First Name, Last Name, UserName, Password" , marcar la opcioón de "
 // //I'm not a robot" y click en Register
 
-test('Interacciones básicas en Demo QA, Test case 12-14 ', async ({ page }) => {
+test('Test case 12: Completar registro con CAPTCHA ', async ({ page }) => {
 try {
     console.log("Test case 12: Completar registro con CAPTCHA");
 
@@ -428,9 +432,9 @@ try {
     // Mensaje de error en la consola
     console.error(`❌ Test case 12: Falló la validación del registro con CAPTCHA. Error: ${error.message}`);
 }
-
-
-    //CASO13 Verificar mensaje de error al ingresar credenciales inválidas en Book Store Application
+});
+test('Test case 13: Verificar mensaje de error al ingresar credenciales inválidas en https://demoqa.com/login', async ({ page }) => {
+    //CASO13 Negativa Verificar mensaje de error al ingresar credenciales inválidas en Book Store Application
     try {
         console.log("Test case 13: Verificar mensaje de error al ingresar credenciales inválidas en https://demoqa.com/login");
 
@@ -441,8 +445,8 @@ try {
         await expect(page).toHaveURL('https://demoqa.com/login');
 
         // Paso 2: Llenar los campos con datos inválidos
-        await page.fill('#userName', 'd'); // Nombre de usuario inválido
-        await page.fill('#password', '1'); // Contraseña inválida
+        await page.fill('#userName', 'UserPrueba'); // Nombre de usuario inválido
+        await page.fill('#password', '123'); // Contraseña inválida
 
         // Paso 3: Hacer clic en el botón "Login"
         await page.click('#login');
@@ -457,15 +461,15 @@ try {
         expect(errorText?.trim()).toBe('Invalid username or password!');
 
         // Mensaje de éxito en la consola
-        console.log("✅ Test case 13: Mensaje de error mostrado correctamente para login inválido.");
+        console.log("✅ Test case 13 Negativa: Mensaje de error mostrado correctamente para login inválido.");
     } catch (error) {
         // Mensaje de error en la consola
         console.error(`❌ Test case 13: Falló la validación del mensaje de error. Error: ${error.message}`);
     }
-
+  });
     // //CASO14
     // //Visualizar anuncio en la parte inferior de Register. https://demoqa.com/register
-
+test('Test case 14: Verificar anuncio inferior en la página Register', async ({ page }) => {
     try {
         console.log("Test case 14: Verificar anuncio inferior en la página Register");
 
@@ -486,7 +490,7 @@ try {
         console.error(`❌ Test Case 14: Falló la validación del anuncio inferior. Error: ${error.message}`);
     }
 });
-// //CASO15
+// //CASO15 negativa
 test('Validar que el registro sea bloqueado si no se completa el CAPTCHA', async ({ page }) => {
   try {
     console.log("Test case 15: Validar que el registro sea bloqueado si no se completa el CAPTCHA");
